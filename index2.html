@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style3.css">
+    <script>
+        var counter = 1;
+  setInterval(function(){
+  document.getElementById('radio' + counter).checked = true;
+  counter++;
+  if(counter > 4){
+  counter = 1;
+  }
+  }, 2500);
+    </script>
+    <style>
+        body{
+  
+  margin: 0;
+  height: 100vh;
+  background: #1d1d1f;
+}
+
+.karusel_snimka{
+  border-radius: 5px;
+  overflow: hidden;
+  width: 712px;
+  height: 364px;
+  
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+}
+
+.karusel_shoumev{
+  width: 500%;
+  height: 364px;
+  display: flex;
+}
+
+.karusel_shoumev input{
+  display: none;
+}
+
+.sekus{
+  width: 20%;
+  transition: 2s;
+}
+
+.sekus img{
+  width: 712px;
+  height: 364px;
+}
+
+.rukovodstvo_navigats{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 712px;
+  margin-top: -40px;
+}
+
+.manual-btn {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 1s;
+  border: 2px solid #459ac1;
+  padding: 5px;
+  width: 42px;
+  box-shadow: 1px 1px 5px 0px rgb(70 67 67 / 63%), 0px 0px 3px 0px rgb(40 37 37 / 60%);
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #dd7a15;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  justify-content: center;
+  margin-top: 460px;
+  display: flex;
+  width: 800px;
+}
+
+.automobile-sliv div{
+  border-radius: 8px;
+  transition: 1s;
+  border: 2px solid #f3b03a;
+  padding: 5px;
+  width: 30px;
+}
+
+.automobile-sliv div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .automobile-sliv .auto-btn1{
+  background: #d8f33a;
+}
+
+#radio2:checked ~ .automobile-sliv .auto-btn2{
+   
+  background: #d8f33a;
+}
+
+#radio3:checked ~ .automobile-sliv .auto-btn3{
+  background: #d8f33a;
+}
+
+#radio4:checked ~ .automobile-sliv .auto-btn4{
+  background: #d8f33a;
+}
+
+
+        .popup {
+             display: none; /* Сначала скрыто */
+             position: fixed;
+             z-index: 1;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 100%;
+             overflow: auto;
+             background-color: rgba(0,0,0,0.4);
+         }
+        .popup-content {
+             background-color: #fefefe;
+             margin: 15% auto;
+             padding: 20px;
+             border: 1px solid #888;
+             width: 400px;
+             border-radius: 25px;
+         }
+        .close-popup {
+             color: #aaa;
+             float: right;
+             font-size: 28px;
+             font-weight: bold;
+         }
+        .close-popup:hover,
+        .close-popup:focus {
+             color: black;
+             text-decoration: none;
+             cursor: pointer;
+         }
+     
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1 class="logo">St0re</h1>
+        <nav class="header__nav">
+            <a href="#">Главная</a>
+            <a href="index.html">Apple</a>
+            <a href="index1.html">Samsung</a>
+            <a href="index4.html">Каталог</a>
+            <a href="index3.html">О нас</a>
+            <a href="index11.html">Личный кабинет</a>
+          </nav>
+        </div>
+    </header>
+    <div class="slider_header">
+        <h1 class="header_slider">Добро пожаловать в магазин Phonestore!</h1>
+    </div>
+    <div class="container">
+    <div class="karusel_snimka">
+        <div class="karusel_shoumev">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <div class="sekus first">
+        <img src="apple-iphone-15-pro-max-vs-samsung-galaxy-s23-ultra.webp" alt="Скрипты">
+        </div>
+        <div class="sekus">
+        <img src="iphone-15-pro-vs-samsung-galaxy-s23-ultra.jpg" alt="Шаблоны">
+        </div>
+        <div class="sekus">
+        <img src="s23_02.jpg" alt="Дизайн">
+        </div>
+        <div class="sekus">
+        <img src="AQAKzjN40iscvRdokSGKSnoWFv-7WnMzowGSHZ1C4mgGCj5j9OOete5po0HT-JUnGnKZTj0AAahFPgfutXvnXSaOxl8.png" alt="Услуги">
+        </div>
+        </div>
+    </div>
+        <div class="rukovodstvo_navigats">
+        
+        </div>
+      </div>
+      <div class="form">
+        <p class="form1">Мы предоставим вам лучшие цену и качество на рынке</p>
+        <form id="preOrderForm" action="#">
+          <input type="email" id="emailInput" placeholder="Email" required>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
+        <div id="popup" class="popup">
+          <div class="popup-content">
+              <span class="close-popup">&times;</span>
+              <p>Спасибо за предзаказ, наши сотрудники свяжутся с вами.</p>
+          </div>
+    </div>
+    <div class="main">
+        <h2 class="header__main">Вступайте в новую эру. Galaxy S23 | S23+</h2>
+        <img class="img__header"src="samsung-galaxy-s23-ultranin-kamerasi-onuncu-sirada-kaldi-Azla.webp" alt="">
+    </div>
+    <div class="subtittle">
+        <div class="container1">
+            <div class="main2">
+                <h2 class="header__main"></h2>
+                <div class="img__camera">
+                    
+                <p class="main__camera">Samsung s23 впечатляет вас своей профессиональной качественной оптикой. Вы сможете запечатлеть чудеса мира с фронтальной 32-мегапиксельной камерой.<br> Благодаря главной тройной камере, включающей 64-мегапиксельный объектив, 12-мегапиксельный широкоугольный объектив и 5-мегапиксельный макро объектив, наша камера рождает уникальные произведения искусства. Не только разрешение, но и технология HDR10+ поддерживают эту мощную камеру. А макро объектив позволит вам увидеть мир в более деталях, которые часто ускользают от глаз.</p>
+                <img class="img1"src="S23-Ultra_ISOCELL-HP2_main1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="btns">
+        <button onclick="location.href='index4.html'; "class="btn__1" type="submit">сравнить все модели Samsung ></button>
+    </div>
+    </div>
+
+    <div class="main">
+        <h2 class="header__main">Придайте этому стиль.  iPhone 15 Pro | Pro Max</h2>
+        <img class="img__header"src="iPhone-15-Pro-Review-Top-Gear.webp" alt="">
+    </div>
+    <div class="subtittle">
+        <div class="container1">
+            <div class="main2">
+                <h2 class="header__main"></h2>
+                <div class="img__camera">
+                    
+                <h2 class="main__camera">iPhone.
+                    Выкован из титана. iPhone 15 Pro — первый iPhone, изготовленный из титана авиационного класса, изготовленного из того же сплава, который используют космические корабли для полетов на Марс. Это здесь. Крупнейший редизайн в истории графических процессоров Apple. A17 Pro — это совершенно новый класс чипов iPhone, который на сегодняшний день обеспечивает лучшую графическую производительность.</h2>
+                <img class="img1"src="apple-raskryla-ceny-na-iphone-15-pro-i-iphone-15-pro-max_1694543230464472152.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="btns">
+        <button onclick="location.href='index4.html';" class="btn__1" type="submit">сравнить все модели iPhone ></button>
+    </div>
+    </div>
+    <footer>
+        <div class="contact-info">
+            <h3>Контакты</h3>
+          <p>Телефон: 8-800-555-35-35</p>
+          <p>Email: Service@mail.ru</p>
+        </div>
+        <div class="social-links">
+          <a href="https://www.telegram.com">Telegram</a>
+          <a href="https://www.vk.com">VK</a>
+          <a href="https://www.youtube.com">Youtube</a>
+        </div>
+      </footer>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const popup = document.getElementById('popup');
+            const closeButton = document.querySelector('.close-popup');
+        
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Предотвращаем стандартную отправку формы
+        
+                // Отображаем всплывающее окно
+                popup.style.display = 'block';
+            });
+        
+            closeButton.onclick = function() {
+                popup.style.display = 'none';
+            };
+        
+            // Закрытие всплывающего окна при клике вне его области
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = 'none';
+                }
+            };
+        });
+        </script>
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('preOrderForm');
+            const popup = document.getElementById('popup');
+            const closeButton = document.querySelector('.close-popup');
+            const emailInput = document.getElementById('emailInput');
+        
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Предотвращаем стандартную отправку формы
+        
+                // Отображаем всплывающее окно
+                popup.style.display = 'block';
+        
+                // Создаем JSON объект с email
+                const data = { email: emailInput.value };
+        
+                // Преобразуем JSON объект в строку
+                const jsonData = JSON.stringify(data);
+        
+                // Создаем Blob из JSON строки
+                const blob = new Blob([jsonData], { type: 'application/json' });
+        
+                // Создаем URL для Blob
+                const url = URL.createObjectURL(blob);
+        
+                // Создаем ссылку для скачивания файла
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'email.json';
+                link.click();
+        
+                // Очищаем ссылку
+                link.remove();
+            });
+        
+            closeButton.onclick = function() {
+                popup.style.display = 'none';
+            };
+        
+            // Закрытие всплывающего окна при клике вне его области
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = 'none';
+                }
+            };
+        });
+        </script>
+</body>
+</html>

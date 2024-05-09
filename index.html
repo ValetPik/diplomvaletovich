@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .popup {
+             display: none; /* Сначала скрыто */
+             position: fixed;
+             z-index: 1;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 100%;
+             overflow: auto;
+             background-color: rgba(0,0,0,0.4);
+         }
+        .popup-content {
+             background-color: #fefefe;
+             margin: 15% auto;
+             padding: 20px;
+             border: 1px solid #888;
+             width: 400px;
+             border-radius: 25px;
+         }
+        .close-popup {
+             color: #aaa;
+             float: right;
+             font-size: 28px;
+             font-weight: bold;
+         }
+        .close-popup:hover,
+        .close-popup:focus {
+             color: black;
+             text-decoration: none;
+             cursor: pointer;
+         }
+     </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1 class="logo">St0re</h1>
+        <nav class="header__nav">
+            <a href="index2.html">Главная</a>
+            <a href="index.html">Apple</a>
+            <a href="index1.html">Samsung</a>
+            <a href="index4.html">Каталог</a>
+            <a href="index3.html">О нас</a>
+            <a href="index11.html">Личный кабинет</a>
+          </nav>
+        </div>
+    </header>
+    <main>
+<div>
+    <h1 class="logo__main">Apple.</h1>
+</div>
+<div class="container">
+    <div class="left__text">
+    <h2 class="main__header">Исследуйте полную историю</h2>
+    <h2 class="main__header1">iPhone 15 Pro Max<br> имеет самый<br> длинный<br> оптический зум<br> среди iPhone.<br> Далеко.
+    </h2>
+    <form id="preOrderForm" action="#">
+        <input type="email" id="emailInput" placeholder="Email" required>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <p>Спасибо за предзаказ, наши сотрудники свяжутся с вами.</p>
+        </div>
+    </div>
+</div>
+    <img class="main__img" src="107114929-1662574328371-iphone-14-pro-colors.jpg" alt="" float="right">
+    
+</div>
+
+<div class="container1">
+    <div class="main2">
+        <h2 class="header__main">Камера, которая захватит ваше самое смелое воображение. </h2>
+        <div class="img__camera">
+            <img class="img1"src="Apple-iPhone-15-Pro-lineup-camera-system-230912_big.jpg.large_large.png" alt="">
+        <h2 class="main__camera">В этой модели установлены три<br> основные камеры (48 Мп, 12 Мп и 12 Мп)<br> и фронтальный модуль (12 Мп),<br> можно записывать видео в качестве 4К<br> с частотой 30 кадров в секунду.</h2>
+        
+    </div>
+</div>
+<div class="block">
+    <img class="camera__img"src="48mp_camera__cxq25ak34nau_large.jpg" alt="">
+    <h2 class="camera__text">Основная камера 48 Мп стала более<br> совершенной, чем когда-либо, и позволяет делать фотографии сверхвысокого разрешения<br> с новым уровнем детализации и цвета. <br>Это позволяет создавать фотографии высочайшего качества, захватывая каждую деталь с непревзойденной четкостью.<br> Новые технологии обработки изображений также придают фотографиям более глубокий<br> и насыщенный цвет,<br> делая каждый кадр настоящим произведением искусства.</h2>
+    
+</div>
+<div class="btns">
+    <button onclick="location.href='index4.html';" class="btn__1" type="submit">сравнить все модели iPhone ></button>
+</div>
+</div>
+</div>
+    </main>
+    
+        <footer>
+            <div class="contact-info">
+                <h3>Контакты</h3>
+              <p>Телефон: 8-800-555-35-35</p>
+              <p>Email: Service@mail.ru</p>
+            </div>
+            <div class="social-links">
+              <a href="https://www.telegram.com">Telegram</a>
+              <a href="https://www.vk.com">VK</a>
+              <a href="https://www.youtube.com">Youtube</a>
+            </div>
+          </footer>
+    
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.querySelector('form');
+                const popup = document.getElementById('popup');
+                const closeButton = document.querySelector('.close-popup');
+            
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Предотвращаем стандартную отправку формы
+            
+                    // Отображаем всплывающее окно
+                    popup.style.display = 'block';
+                });
+            
+                closeButton.onclick = function() {
+                    popup.style.display = 'none';
+                };
+            
+                // Закрытие всплывающего окна при клике вне его области
+                window.onclick = function(event) {
+                    if (event.target == popup) {
+                        popup.style.display = 'none';
+                    }
+                };
+            });
+            </script>
+           <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('preOrderForm');
+                const popup = document.getElementById('popup');
+                const closeButton = document.querySelector('.close-popup');
+                const emailInput = document.getElementById('emailInput');
+            
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Предотвращаем стандартную отправку формы
+            
+                    // Отображаем всплывающее окно
+                    popup.style.display = 'block';
+            
+                    // Создаем JSON объект с email
+                    const data = { email: emailInput.value };
+            
+                    // Преобразуем JSON объект в строку
+                    const jsonData = JSON.stringify(data);
+            
+                    // Создаем Blob из JSON строки
+                    const blob = new Blob([jsonData], { type: 'application/json' });
+            
+                    // Создаем URL для Blob
+                    const url = URL.createObjectURL(blob);
+            
+                    // Создаем ссылку для скачивания файла
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'email.json';
+                    link.click();
+            
+                    // Очищаем ссылку
+                    link.remove();
+                });
+            
+                closeButton.onclick = function() {
+                    popup.style.display = 'none';
+                };
+            
+                // Закрытие всплывающего окна при клике вне его области
+                window.onclick = function(event) {
+                    if (event.target == popup) {
+                        popup.style.display = 'none';
+                    }
+                };
+            });
+            </script>
+                
+</body>
+</html>

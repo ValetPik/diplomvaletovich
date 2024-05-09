@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@5.0.6/dist/jquery.inputmask.bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.button');
+    const modal = document.getElementById('orderFormModal');
+    const span = document.getElementsByClassName("close")[0];
+  
+    // Функция для открытия модального окна
+    function openModal() {
+      modal.style.display = "block";
+    }
+  
+    // Функция для закрытия модального окна
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+  
+    // Функция для закрытия модального окна при нажатии вне его области
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  
+    // Обработчик события для кнопок "В корзину"
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+        openModal(); // Открываем модальное окно
+      });
+    });
+  });
+  </script>
+
+<script>
+  var counter = 1;
+setInterval(function(){
+document.getElementById('radio' + counter).checked = true;
+counter++;
+if(counter > 4){
+counter = 1;
+}
+}, 2500);
+
+function showAll() {
+// Отобразить все картинки
+document.getElementById('images').innerHTML = `
+<img src="e1d5367813d0400023a52ec8a4ebab52d160fb28ce8331c7022a4b72ddef696b.jpg.webp">
+<img src="e1d5367813d0400023a52ec8a4ebab52d160fb28ce8331c7022a4b72ddef696b.jpg.webp">
+<img src="d724c257977ad0dea464f177f095470018e5c2f0f451402c7e5f984c4e56ebf6.jpg.webp">
+<img src="7f9749f9571c2d097ac38121545eaf585e1d0ae30aad7aae6ab83207e5996abd.jpg.webp">
+<img src="3012baa9bc23995289e498d33793b6007a246987cd6e5bd96dbd15aa6cd93c2c.jpg.webp">
+<img src="2630ee44ffc9ec45e62359c4c1da9f9ad1aee2f9dc57bb0d1f73360d0328f643.jpg.webp">
+<img src="8b51c38a88b6a741d8484925edb177c35307277542c25f99353d9271684488f7.jpg.webp">
+<img src="2630ee44ffc9ec45e62359c4c1da9f9ad1aee2f9dc57bb0d1f73360d0328f643.jpg.webp">
+`;
+}
+
+function showSamsung() {
+// Отобразить только картинки Samsung
+document.getElementById('images').innerHTML = `
+<img src="e1d5367813d0400023a52ec8a4ebab52d160fb28ce8331c7022a4b72ddef696b.jpg.webp">
+<img src="e1d5367813d0400023a52ec8a4ebab52d160fb28ce8331c7022a4b72ddef696b.jpg.webp">
+<img src="d724c257977ad0dea464f177f095470018e5c2f0f451402c7e5f984c4e56ebf6.jpg.webp">
+`;
+}
+
+function showApple() {
+// Отобразить только картинки Apple
+document.getElementById('images').innerHTML = `
+<img src="7f9749f9571c2d097ac38121545eaf585e1d0ae30aad7aae6ab83207e5996abd.jpg.webp">
+<img src="3012baa9bc23995289e498d33793b6007a246987cd6e5bd96dbd15aa6cd93c2c.jpg.webp">
+<img src="2630ee44ffc9ec45e62359c4c1da9f9ad1aee2f9dc57bb0d1f73360d0328f643.jpg.webp">
+<img src="8b51c38a88b6a741d8484925edb177c35307277542c25f99353d9271684488f7.jpg.webp">
+<img src="2630ee44ffc9ec45e62359c4c1da9f9ad1aee2f9dc57bb0d1f73360d0328f643.jpg.webp">
+`;
+}
+
+window.addEventListener("resize", AutoScale); //Масштабируем страницу при растягивании окна
+
+AutoScale(); //Масштабируем страницу после загрузки
+
+function AutoScale()
+{
+let width = window.innerWidth; //Ширина окна
+//Если вы хотите проверять по размеру экрана, то вам нужно свойство window.screen.width
+
+if(width > 1280)
+{
+ChangeScale("big");
+}
+else if(width <= 1280 && width > 720)
+{
+ChangeScale("normal");
+}
+else if(width < 720)
+{
+ChangeScale("small");
+}
+}
+</script>
+<style>
+  body{
+
+margin: 0;
+height: 100vh;
+background: #1d1d1f;
+}
+
+.karusel_snimka{
+border-radius: 5px;
+overflow: hidden;
+width: 712px;
+height: 364px;
+
+box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+}
+
+.karusel_shoumev{
+width: 500%;
+height: 364px;
+display: flex;
+}
+
+.karusel_shoumev input{
+display: none;
+}
+
+.sekus{
+width: 20%;
+transition: 2s;
+}
+
+.sekus img{
+width: 712px;
+height: 364px;
+}
+
+.rukovodstvo_navigats{
+position: absolute;
+display: flex;
+justify-content: center;
+width: 712px;
+margin-top: -40px;
+}
+
+.manual-btn {
+border-radius: 8px;
+cursor: pointer;
+transition: 1s;
+border: 2px solid #459ac1;
+padding: 5px;
+width: 42px;
+box-shadow: 1px 1px 5px 0px rgb(70 67 67 / 63%), 0px 0px 3px 0px rgb(40 37 37 / 60%);
+}
+
+.manual-btn:not(:last-child){
+margin-right: 40px;
+}
+
+.manual-btn:hover{
+background: #dd7a15;
+}
+
+#radio1:checked ~ .first{
+margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+position: absolute;
+justify-content: center;
+margin-top: 460px;
+display: flex;
+width: 800px;
+}
+
+.automobile-sliv div{
+border-radius: 8px;
+transition: 1s;
+border: 2px solid #f3b03a;
+padding: 5px;
+width: 30px;
+}
+
+.automobile-sliv div:not(:last-child){
+margin-right: 40px;
+}
+
+#radio1:checked ~ .automobile-sliv .auto-btn1{
+background: #d8f33a;
+}
+
+#radio2:checked ~ .automobile-sliv .auto-btn2{
+
+background: #d8f33a;
+}
+
+#radio3:checked ~ .automobile-sliv .auto-btn3{
+background: #d8f33a;
+}
+
+#radio4:checked ~ .automobile-sliv .auto-btn4{
+background: #d8f33a;
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="header">
+        <h1 class="logo">St0re</h1>
+    <nav class="header__nav">
+        <a href="index2.html">Главная</a>
+        <a href="index.html">Apple</a>
+        <a href="index1.html">Samsung</a>
+        <a href="index4.html">Каталог</a>
+        <a href="index3.html">О нас</a>
+        <a href="index11.html">Личный кабинет</a>
+      </nav>
+    </div>
+</header>
+
+<div class="container">
+  <div class="karusel_snimka">
+      <div class="karusel_shoumev">
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      <div class="sekus first">
+      <img src="iPhone-15-Pro-Review-Top-Gear.webp" alt="Скрипты">
+      </div>
+      <div class="sekus">
+      <img src="tnW7dSxqfAvpV6ja2RaNaU.jpg" alt="Шаблоны">
+      </div>
+      <div class="sekus">
+      <img src="Garmin-Venu-3-vs-Samsung-Galaxy-Watch-6-1.jpg" alt="Дизайн">
+      </div>
+      <div class="sekus">
+      <img src="S23-Ultra_ISOCELL-HP2_main1.jpg" alt="Услуги">
+      </div>
+      </div>
+  </div>
+      <div class="rukovodstvo_navigats">
+      
+      </div>
+    </div>
+
+    <div class="container_header">
+      <div class="header__1">
+      <h1 class="header_1">Каталог</h1></div>
+
+<div id="orderFormModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form id="orderForm">
+      <label for="phone">Номер телефона:</label><br>
+      <input type="tel" id="phone" name="phone"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="name">Имя:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <input class="btn" type="submit" value="Отправить">
+    </form>
+    <div id="thankYouMessage" style="display: none;">
+      Спасибо что выбрали наш магазин, с вами свяжутся
+    </div>
+  </div>
+</div>
+
+    
+
+
+  <div class="container1">
+    <div class="catalog__item">
+    <div class="product-item">
+        <img class="samsung1"src="samsung 23.webp">
+        <div class="product-list">
+          <h3>Samsung Galaxy S23</h3>
+          <h2>6.1"</h2>
+          <h2>Dynamic AMOLED 2X</h2>
+          <h2>2340x1080</h2>
+          <h2>3900 мА*ч</h2>
+          <h2></h2>
+            <span class="price">₽ 89990</span>
+            <a href="" class="button">Оформить заказ</a>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img class="samsung2"src="samsung 23.webp">
+        <div class="product-list">
+          <h3>Samsung Galaxy S23+</h3>
+          <h2>6.6"</h2>
+          <h2>Dynamic AMOLED 2X</h2>
+          <h2>2340x1080</h2>
+          <h2>4700 мА*ч</h2>
+          <h2></h2>
+            <span class="price">₽ 109990</span>
+            <a href="" class="button">Оформить заказ</a>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img class="samsung3"src="ultra 23.webp">
+        <div class="product-list">
+          <h3>Samsung Galaxy S23 Ultra</h3>
+          <h2>6.8"</h2>
+          <h2>Dynamic AMOLED 2X</h2>
+          <h2>3088x1440</h2>
+          <h2>5000 мА*ч</h2>
+          <h2></h2>
+            <span class="price">₽ 119990</span>
+            <a href="" class="button">Оформить заказ</a>
+        </div>
+      </div>
+
+      
+
+      <div class="product-item">
+        <img class="apple1"src="15.webp">
+        <div class="product-list">
+          <h3>iPhone 15</h3>
+          <h2>6.1"</h2>
+          <h2>Super Retina XDR display</h2>
+          <h2>2556x1179</h2>
+          <h2>3349 мА*ч</h2>
+          <h2></h2>
+            <span class="price">₽ 139990</span>
+            <a href="" class="button">Оформить заказ</a>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img class="apple2"src="15 pro max.webp">
+        <div class="product-list">
+          <h3>iPhone 15 Pro Max</h3>
+          <h2>6.7"</h2>
+          <h2>Super Retina XDR display</h2>
+          <h2>2796x1290</h2>
+          <h2>4441 мА*ч</h2>
+          <h2></h2>
+            <span class="price">₽ 179990</span>
+            <a href="" class="button">Оформить заказ</a>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img class="apple3"src="14.webp">
+        <div class="product-list">
+          <h3>iPhone 14</h3>
+          <h2>6.1"</h2>
+          <h2>Super Retina XDR display</h2>
+          <h2>2532x1170</h2>
+          <h2>3279 мА*ч</h2>
+          <h2></h2>
+            <span class="price">₽ 89990</span>
+            <a href="" class="button">Оформить заказ</a>
+        </div>
+      </div>
+      <div class="product-item">
+        <img class="apple4"src="14 pro.webp">
+        <div class="product-list">
+          <h3>iPhone 14 Pro Max</h3>
+          <h2>6.7"</h2>
+          <h2>Super Retina XDR display</h2>
+          <h2>2556x1179</h2>
+          <h2>4323 мА*ч</h2>
+          <h2></h2>
+            <span class="price">₽ 119990</span>
+            <a href="" class="button">Оформить заказ</a>
+        </div>
+      </div>
+      <div class="product-item">
+        <img class="apple5"src="14 plus.webp">
+        <div class="product-list">
+          <h3>iPhone 14 Plus</h3>
+          <h2>6.7"</h2>
+          <h2>Super Retina XDR display</h2>
+          <h2>2778x1284</h2>
+          <h2>4325 мА*ч</h2>
+          <h2></h2>
+            <span class="price">₽ 99990</span>
+            <a href="" class="button">Оформить заказ</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const orderForm = document.getElementById('orderForm');
+        const phone = document.getElementById('phone');
+        const email = document.getElementById('email');
+        const name = document.getElementById('name');
+      
+        // Функция для скачивания JSON файла
+        function downloadJsonFile(data, filename) {
+          const a = document.createElement('a');
+          const file = new Blob([JSON.stringify(data)], {type: 'application/json'});
+          const url = URL.createObjectURL(file);
+          a.href = url;
+          a.download = filename;
+          a.click();
+        }
+      
+        // Обработчик события отправки формы
+        orderForm.addEventListener('submit', function(e) {
+          e.preventDefault(); // Предотвращаем стандартную отправку формы
+      
+          const formData = {
+            phone: phone.value,
+            email: email.value,
+            name: name.value
+          };
+      
+          downloadJsonFile(formData, 'orderData.json'); // Скачивание JSON файла с данными формы
+        });
+      });
+      </script>
+   
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const orderForm = document.getElementById('orderForm');
+      const thankYouMessage = document.getElementById('thankYouMessage');
+    
+      // Обработчик события отправки формы
+      orderForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Предотвращаем стандартную отправку формы
+    
+        // Здесь можно добавить логику отправки данных формы, например, AJAX запрос
+    
+        // Скрываем форму и показываем сообщение
+        orderForm.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+    
+        // Удаляем заголовок "Оформление заказа"
+        const modalContent = document.querySelector('.modal-content');
+        modalContent.removeChild(modalContent.firstChild);
+      });
+    
+      // Обработчик события закрытия модального окна
+      const closeModal = document.querySelector('.close');
+      closeModal.addEventListener('click', function() {
+        document.getElementById('orderFormModal').style.display = 'none';
+      });
+    
+      // Обработчик события закрытия модального окна вне его области
+      window.onclick = function(event) {
+        if (event.target == document.getElementById('orderFormModal')) {
+          document.getElementById('orderFormModal').style.display = 'none';
+        }
+      };
+    });
+    </script>
+    
+    <footer>
+      <div class="contact-info">
+          <h3>Контакты</h3>
+        <p>Телефон: 8-800-555-35-35</p>
+        <p>Email: Service@mail.ru</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.telegram.com">Telegram</a>
+        <a href="https://www.vk.com">VK</a>
+        <a href="https://www.youtube.com">Youtube</a>
+      </div>
+    </footer>
+    
+</body>
+</html>

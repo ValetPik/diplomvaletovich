@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  
+  
+  
+      <link rel="stylesheet" href="login (2).css">
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const form = document.querySelector('form');
+    
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            // Собираем данные пользователя
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('pass').value;
+    
+            // Создаем объект с данными пользователя
+            const userData = {
+              email: email,
+              password: pass
+            };
+    
+            // Преобразуем объект в JSON
+            const jsonData = JSON.stringify(userData);
+    
+            // Создаем ссылку для скачивания файла
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+    
+            // Создаем ссылку для скачивания
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'user_data.json';
+            document.body.appendChild(link);
+    
+            // Автоматически кликаем по ссылке для скачивания
+            link.click();
+    
+            // Чистим ссылку и объект blob
+            URL.revokeObjectURL(url);
+            document.body.removeChild(link);
+          });
+        });
+
+        
+      </script>
+</head>
+
+<body>
+  <body>
+    <header>
+      <div class="header">
+          <h1 class="logo">St0re</h1>
+      <nav class="header__nav">
+          <a href="index2.html">Главная</a>
+          <a href="index.html">Apple</a>
+          <a href="index1.html">Samsung</a>
+          <a href="index4.html">Каталог</a>
+          <a href="index3.html">О нас</a>
+          <a href="#">Личный кабинет</a>
+        </nav>
+      </div>
+  </header>
+<form action="check.php" method="post">
+  <input checked="" id="signin" name="action" type="radio" value="signin">
+  <label for="signin">Войти</label>
+  <input id="signup" name="action" type="radio" value="signup">
+  <label for="signup">Регистрация</label>
+  <input id="reset" name="action" type="radio" value="reset">
+  <label for="reset">Сброс</label>
+  <div id="wrapper">
+    <div id="arrow"></div>
+    <input id="email" placeholder="Email" type="text">
+    <input id="pass" placeholder="Пароль" type="password">
+    <input id="repass" placeholder="Повторите пароль" type="password">
+  </div>
+  <button type="submit">
+    <span>
+      Сбросить пароль
+      <br>
+      Войти
+      <br>
+      Зарегистрироваться
+    </span>
+  </button>
+</form>
+
+
+
+<script type="text/javascript">
+    
+</script>
+
+
+
+  
+  
+</body>
+</html>
