@@ -1,0 +1,133 @@
+body{
+    margin: 0 auto;
+    background-color: #1D1D1F;
+    color: #86868D;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+.header{
+   display: flex;
+   justify-content: space-between;
+}
+header{
+    background-color: black;
+}
+.logo{
+    font-size: 20px;
+    color: #1D1D1F;
+    padding-left: 100px;
+}
+a{
+    text-decoration: none;
+    color: #1D1D1F;
+    
+}
+.header__nav{
+    padding-top: 17px;
+    padding-right: 100px;
+    font-weight: 700;
+        
+        
+}
+.logo__main{
+    text-align: center;
+
+}
+
+ .title1{
+    text-align: center;
+    
+ }
+
+ .title__img{
+    width: 1000px;
+    height: 600px;
+    margin-left: 460px;
+ }
+
+ .subtitle{
+    width: 900px;
+    padding-left: 500px;
+    font-weight: 400;
+ }
+ .map{
+    margin-left: 700px;
+    padding-bottom: 70px;
+ }
+
+ footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.social-links{
+    padding-top: 95px;
+    padding-right: 10px;
+    
+}
+@media (max-width: 992px) and (min-width: 769px){
+    .title__img {
+        width: 800px;
+        height: 600px;
+        margin-left: 100px;
+    }
+    .subtitle {
+        width: 800px;
+        padding-left: 120px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .map {
+        margin-left: 300px;
+        padding-bottom: 70px;
+    }
+}
+@media(max-width: 768px) and (min-width: 481px){
+    .title__img {
+        width: 600px;
+        height: 400px;
+        margin-left: 100px;
+    }
+    .subtitle {
+        width: 650px;
+        padding-left: 100px;
+        font-weight: 400;
+        font-size: 22px;
+    }
+    .map {
+        margin-left: 220px;
+        padding-bottom: 70px;
+    }
+}
+
+@media(max-width: 480px){
+    .logo {
+        font-size: 20px;
+        color: #1D1D1F;
+        padding-left: 100px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+    .header__nav {
+        padding-top: 17px;
+        padding-right: 100px;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+    .subtitle {
+        width: 400px;
+        padding-left: 70px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .title__img {
+        width: 400px;
+        height: 300px;
+        margin-left: 60px;
+    }    
+    .map {
+        margin-left: 70px;
+        padding-bottom: 70px;
+    }
+}

@@ -1,0 +1,501 @@
+body{
+    margin: 0 auto;
+    background-color: #1D1D1F;
+    color: #86868D;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+.header{
+   display: flex;
+   justify-content: space-between;
+}
+header{
+    background-color: black;
+}
+.logo{
+    font-size: 20px;
+    color: #1D1D1F;
+    padding-left: 100px;
+}
+a{
+    text-decoration: none;
+    color: #1D1D1F;
+    
+}
+.header__nav{
+    padding-top: 17px;
+    padding-right: 100px;
+    font-weight: 700;
+        
+        
+}
+.logo__main{
+    text-align: center;
+
+}
+
+.main__info{
+    display: flex;
+    
+}
+.main__img{
+    width: 574px;
+    height: 413px;
+    border-radius: 10%;
+    filter: blur(2px);
+}
+.main__header{
+    margin-right: 100px;
+    padding-left: 400px;
+    font-size: 35px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.main__header1{
+    padding-left: 400px;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    
+  }
+  
+  .left-text {
+    margin-right: 20px;
+    
+  }
+
+input{
+    margin-left: 400px;
+    border-radius: 20px;
+    font-size: 22px;
+}
+
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 25px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #444;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+    
+}
+.btn:focus-visible {
+	border: 1px solid #4c51f9;
+	outline: none;
+}
+.btn:hover {
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn:active {
+	background-color: #808080;
+}
+.btn:disabled {
+	background-color: #eee;
+	border-color: #eee;
+	color: #444;
+	cursor: not-allowed;
+}
+
+.container1{
+    padding-top: 30px;
+    
+    
+}
+
+.header__main{
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.img__camera{
+    display: flex;
+    
+}
+
+.img1{
+    border-radius: 25px;
+    width: 560px;
+    height: 300px;
+    margin-left: 400px;
+    margin-bottom: 50px;
+}
+
+.main__camera{
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.block{
+    width: 1000px;
+    height: 650px;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    margin-left: 450px;
+    margin-bottom: 100px;
+}
+
+.camera__img{
+    padding-left: 100px;
+    padding-top: 35px;
+    padding-right: 20px;
+    width: 600px;
+    height: 580px;
+}
+
+.camera__text{
+    padding-right: 100px;
+    padding-top: 20px;
+    width: 750px;
+    font-weight: 400;
+}
+
+.blockwhite{
+    background-color: white;
+    width: 900px;
+    height: 600px;
+    margin-left: 500px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 50px;
+    
+}
+
+.iphone1{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.social-links{
+    padding-top: 95px;
+    padding-right: 10px;
+    
+}
+
+.card-img1{
+    width: 150px;
+    height: 200px;
+    padding-left: 100px;
+}
+
+.card-title{
+    padding-left: 120px;
+}
+
+.card-subtitle{
+    padding-left: 100px;
+    
+}
+
+.processor{
+    width: 45px;
+    height: 45px;
+    padding-left: 140px;
+}
+
+.btn__1 {
+	display: inline-block;	
+    
+	box-sizing: border-box;
+	padding: 0 30px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #444;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+    
+}
+.btn__1:focus-visible {
+	border: 1px solid #4c51f9;
+	outline: none;
+}
+.btn__1:hover {
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn__1:active {
+	background-color: #808080;
+}
+.btn__1:disabled {
+	background-color: #eee;
+	border-color: #eee;
+	color: #444;
+	cursor: not-allowed;
+}
+
+.btns{
+    padding-left: 800px;
+    padding-bottom: 40px;
+}
+@media (max-width: 992px) and (min-width: 769px){
+    .main__img {
+        width: 500px;
+        height: 350px;
+        border-radius: 10%;
+        filter: blur(2px);
+        margin-right: 50px;
+    }
+    .container {
+        display: flex;
+        margin-left: -380px;
+    }
+    .header__main{
+        font-size: 30px;
+    }
+    .img1{
+        margin-left: 20px;
+    }
+
+    .main__camera{
+        font-size: 25px;
+    }
+    .block{
+        margin-left: 150px;
+        width: 650px;
+        height: 550px;
+    }
+
+    .camera__text{
+        width: 300px;
+        font-size: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+    }
+
+    .camera__img {
+        padding-left: 50px;
+        padding-top: 35px;
+        padding-right: 20px;
+        width: 300px;
+        height: 480px;
+    }
+    .btn__1{
+        margin-left: -440px;
+    }
+}
+@media(max-width: 768px) and (min-width: 481px){
+    .container{
+        margin-left: -350px;
+    }
+
+    .main__img {
+        width: 360px;
+        height: 350px;
+        border-radius: 10%;
+        filter: blur(2px);
+        margin-right: 50px;
+    }
+
+    .header__main {
+        font-size: 25px;
+        text-align: center;
+    }
+    .img1 {
+        border-radius: 25px;
+        width: 400px;
+        height: 250px;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+    .main__camera {
+        padding-left: 20px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .block{
+        margin-left: 100px;
+        width: 600px;
+        height: 550px;
+    }
+
+    .camera__text{
+        width: 300px;
+        font-size: 18px;
+        padding-right: 20px;
+        padding-top: 40px;
+    }
+
+    .camera__img {
+        padding-left: 50px;
+        padding-top: 35px;
+        padding-right: 20px;
+        width: 300px;
+        height: 480px;
+    }
+    .btn {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0 5px;
+        margin: 0 15px 15px 0;
+        outline: none;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #444;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+        cursor: pointer;
+        user-select: none;
+        appearance: none;
+        touch-action: manipulation;
+        vertical-align: top;
+        transition: box-shadow 0.2s;
+    }
+    input {
+        margin-left: 400px;
+        border-radius: 20px;
+        font-size: 15px;
+    }
+}
+@media(max-width: 480px){
+    .container {
+        display: flex;
+        margin-left: -350px;
+    }
+    .main__header {
+        margin-right: 100px;
+        padding-left: 400px;
+        font-size: 20px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .main__header1 {
+        padding-left: 400px;
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .main__img {
+        width: 300px;
+        height: 213px;
+        border-radius: 10%;
+        filter: blur(2px);
+        margin-left: -100px;
+    }
+    input {
+        margin-left: 400px;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+    .btn {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0 5px;
+        margin: 0 15px 15px 0;
+        outline: none;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 10px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #444;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+        cursor: pointer;
+        user-select: none;
+        appearance: none;
+        touch-action: manipulation;
+        vertical-align: top;
+        transition: box-shadow 0.2s;
+    }
+    .logo {
+        font-size: 20px;
+        color: #1D1D1F;
+        padding-left: 100px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+    .header__nav {
+        padding-top: 17px;
+        padding-right: 100px;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+    .header__main {
+        font-size: 20px;
+        text-align: center;
+    }
+    .img1 {
+        border-radius: 25px;
+        width: 260px;
+        height: 150px;
+        margin-left: 0px;
+        margin-bottom: 50px;
+    }
+    .main__camera {
+        padding-left: 20px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .block{
+        margin-left: 80px;
+        width: 330px;
+        height: 250px;
+    }
+
+    
+
+    .camera__img {
+        padding-left: 50px;
+        padding-top: 35px;
+        padding-right: 20px;
+        width: 180px;
+        height: 200px;
+    }
+    
+    .camera__text {
+        width: 300px;
+        font-size: 10px;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+}
